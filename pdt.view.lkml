@@ -8,6 +8,7 @@ view: pdt {
         id as user_id
         , COUNT(*) as lifetime_users
         , users.created_at as created_at
+        , '1'
       FROM users
       GROUP BY user_id, created_at
       ;;
