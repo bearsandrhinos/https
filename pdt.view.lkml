@@ -12,7 +12,9 @@ view: pdt {
       GROUP BY user_id, created_at
       ;;
 
-      persist_for: "24 hours"
+    #  persist_for: "24 hours"
+    sql_trigger_value: SELECT CURRENTDATE() ;;
+      publish_as_db_view: yes
   }
 
   # Define your dimensions and measures here, like this:
